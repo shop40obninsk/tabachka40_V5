@@ -19,6 +19,8 @@ dan_id=2077889373
 #dan_id=808525546
 doctors_id=808525546 #степан id
 
+dimas_id=411871355
+
 electronic_s_key="Электронные сигареты"
 giga_key="Жижа"
 
@@ -133,7 +135,7 @@ def get_message(message):
     text=message.text
     print(text,"h",message.chat.id, message.from_user.first_name)
     if "/" in text:
-        if text=="/admin_get_table" and (chat_id==dan_id or chat_id==doctors_id):
+        if text=="/admin_get_table" and (chat_id==dan_id or chat_id==doctors_id or dimas_id):
             db=open(table_path,"rb")
             bot.send_document(chat_id,db)
 
@@ -207,7 +209,9 @@ def Callback_inline(call):
             mass=(item,manufacturer,name,taste,place,username,first_name,chat_id,url)
             try:
                 append_in_xlsx(table_path,table,mass)
-                bot.send_message(dan_id,f"Новый заказ:\n{item}\n{manufacturer}\n{name}\n{taste}\n{place}\n{username}\n{first_name}\n{chat_id}\n{url}")
+                bot.send_message(dan_id,f"Новый заказ:\n{item}\n{manufacturer}\n{name}\n{taste}\n{place}\n{first_name}\n{url}")
+                if place=="Обнинск":
+                    bot.send_message(dimas_id,f"Новый заказ:\n{item}\n{manufacturer}\n{name}\n{taste}\n{place}\n{first_name}\n{url}")
             except:
                 bot.send_message(dan_id,f"WRITE ERRR\nНовый заказ:\n{item}\n{manufacturer}\n{name}\n{taste}\n{place}\n{username}\n{first_name}\n{chat_id}\n{url}")
 
