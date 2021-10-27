@@ -2,8 +2,9 @@ from openpyxl import load_workbook
 import telebot
 from telebot import types
 from os import walk
+import os
 
-token=data_token
+token=os.environ.get('data_token', None)
 delivery=["Москва","Обнинск","РАНХиГС","РЭУ","РНИМУ","Бауманка","ПМГМУ","РГУ им. Косыгина","РУДН"]
 
 base_path="catalog/"
