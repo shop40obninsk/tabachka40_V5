@@ -14,7 +14,7 @@ giga=base_path+"Жижи/"
 table_path="main.xlsx"
 table="main"
 
-dan_id=int(os.environ.get('dan', None))
+dan_id=int(os.environ.get('dan_id', None))
 doctors_id=int(os.environ.get('doctors', None))
 dimas_id=int(os.environ.get('dimas', None))
 
