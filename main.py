@@ -3,7 +3,7 @@ import telebot
 from telebot import types
 from os import walk
 
-token="2001889625:AAEZrW1nw5GpI9lRshJX5tYiL-zkDX1g7nI"
+token="2001889625:AAGYE4zFLnXbKpNlzoW50L2D1KCw3CrQejY"
 #token="1986086924:AAFNbyaH3lHwpIu9H_a_LmOEuqlrIrdKU8M"
 
 delivery=["Москва","Обнинск","РАНХиГС","РЭУ","РНИМУ","Бауманка","ПМГМУ","РГУ им. Косыгина","РУДН"]
