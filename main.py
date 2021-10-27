@@ -14,11 +14,9 @@ giga=base_path+"Жижи/"
 table_path="main.xlsx"
 table="main"
 
-dan_id=2077889373
-#dan_id=808525546
-doctors_id=808525546 #степан id
-
-dimas_id=411871355
+dan_id=int(os.environ.get('dan', None))
+doctors_id=int(os.environ.get('doctors', None))
+dimas_id=int(os.environ.get('dimas', None))
 
 electronic_s_key="Электронные сигареты"
 giga_key="Жижа"
